@@ -11,6 +11,19 @@ import { getCollectionInfo, getCollectionNfts } from "./api/request";
 import userConfig from "@/userConfig.json";
 import { useRouter } from "next/router";
 
+import { MirrorWorld, ClusterEnvironment } from "@mirrorworld/web3.js"
+import styles from "../styles/Home.module.css"
+
+export default function Home() {
+  const mirrorworld = new MirrorWorld({
+    apiKey: "mw_9HDyI2ccV6x0xEmqXD7JcQk8l7yLvtwZYre", // Replace this with the API Key for your project
+    env: ClusterEnvironment.testnet, // Can be ClusterEnvionment.mainnet for mainnet
+  })
+
+  return <div className={styles.container}></div>
+}
+
+
 const newList = new Array();
 const Home = () => {
   const [filterData, setFilterData] = useState([]);
