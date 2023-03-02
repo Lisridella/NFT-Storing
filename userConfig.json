@@ -1,11 +1,11 @@
 {
   "collections": [
-    "Please enter your Collection ID"
+    "5oH3i35FrPTg5ZFAoLUcPfJSnejggiYa6xAyPpaL8wFq"
   ],
-  "xApiKey": "Please enter your API Key",
-  "serviceFee": "Please enter your service fee (Recommended 4.25)",
-  "currencyOption": "Please enter your payment token",
-  "name": "Please enter your storefront name",
-  "logo": "Please enter your logo image URL",
-  "network": "Please enter your selected network "
+  "network": "devnet",
+  "xApiKey": "mw_9HDyI2ccV6x0xEmqXD7JcQk8l7yLvtwZYre",
+  "serviceFee": 1,
+  "currencyOption": "USDC",
+  "name": "DellaKoe Market",
+  "logo": "https://collections.mirrorworld.fun/1677755150304-nEtxIM0-onepiece-wallpaper.jpg"
 }
