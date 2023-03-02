@@ -11,16 +11,25 @@ import { getCollectionInfo, getCollectionNfts } from "./api/request";
 import userConfig from "@/userConfig.json";
 import { useRouter } from "next/router";
 
+import { useState } from "react"
 import { MirrorWorld, ClusterEnvironment } from "@mirrorworld/web3.js"
 import styles from "../styles/Home.module.css"
 
-export default function Home() {
-  const mirrorworld = new MirrorWorld({
-    apiKey: "mw_9HDyI2ccV6x0xEmqXD7JcQk8l7yLvtwZYre", // Replace this with the API Key for your project
-    env: ClusterEnvironment.testnet, // Can be ClusterEnvionment.mainnet for mainnet
-  })
+const [user, setUser] = useState()
 
-  return <div className={styles.container}></div>
+export default function Home() {
+  async function login() {
+    const { user } = await mirrorworld.login()
+    setUser(user)
+  }
+
+  return (
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <button onClick={login}>Login to DellaKoe/button>
+      </main>
+    </div>
+  )
 }
 
 
